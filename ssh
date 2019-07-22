@@ -3,11 +3,3 @@
 #Requirements
 apt update
 apt upgrade -y
-
-#openSSH-server
-apt install openssh-server
-
-#ssh config
-nano /etc/ssh/sshd_config
-
-
