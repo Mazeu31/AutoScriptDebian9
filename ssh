@@ -10,6 +10,4 @@ apt install openssh-server
 #ssh config
 nano /etc/ssh/sshd_config
 
-#Enable SSH
-systemctl enable ssh
-systemctl start ssh
+
