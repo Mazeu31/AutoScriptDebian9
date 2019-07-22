@@ -305,7 +305,7 @@ apt-get install -y libxml-parser-perl
 # Configure menu
 apt-get install unzip
 cd /usr/local/bin/
-wget "https://github.com/johndesu090/AutoScriptDebianStretch/raw/master/Files/Menu/bashmenu.zip" 
+wget "https://github.com/Mazeu/AutoScriptDebian9/raw/master/Files/Menu/bashmenu.zip" 
 unzip bashmenu.zip
 chmod +x /usr/local/bin/*
 
