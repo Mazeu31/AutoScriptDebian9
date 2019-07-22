@@ -4,8 +4,27 @@
 MYIP=`ifconfig eth0 | awk 'NR==2 {print $2}'`
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 cd /root
-wget "https://github.com/Mazeu31/AutoScriptDebian9/blob/master/Plugins/Plugin.tgz"
+wget "https://github.com/Mazeu31/AutoScriptDebian9/raw/master/Plugins/Plugin.tgz"
+wget "https://github.com/Mazeu31/AutoScriptDebian9/raw/master/Menu/bashmenu.zip"
 
+# set time GMT +8
+ln -fs /usr/share/zoneinfo/Asia/Manila /etc/localtime
+
+# install webmin
+cd
+wget "https://github.com/Mazeu31/AutoScriptDebian9/raw/master/Plugins/webmin_1.801_all.deb"
+dpkg --install webmin_1.801_all.deb;
+apt-get -y -f install;
+sed -i 's/ssl=1/ssl=0/g' /etc/webmin/miniserv.conf
+rm /root/webmin_1.801_all.deb
+service webmin restart
+
+# install screenfetch
+cd
+wget -O /usr/bin/screenfetch "https://raw.githubusercontent.com/Mazeu31/AutoScriptDebian9/master/Plugins/screenfetch"
+chmod +x /usr/bin/screenfetch
+echo "clear" >> .profile
+echo "screenfetch" >> .profile
 #install OpenVPN
 cp -r /usr/share/easy-rsa/ /etc/openvpn
 mkdir /etc/openvpn/easy-rsa/keys
