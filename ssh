@@ -1,5 +1,0 @@
-#!/bin/sh
-
-#Requirement
-apt update
-apt upgrade -y
