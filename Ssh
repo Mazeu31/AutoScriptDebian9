@@ -1,9 +1,5 @@
 #!/bin/sh
 
-#Requirements
-apt update
-apt upgrade -y
-
 #openSSH-server
 apt install openssh-server
 
