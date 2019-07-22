@@ -1,5 +1,15 @@
 #!/bin/sh
 
-#Requirement
+#Requirements
 apt update
 apt upgrade -y
+
+#openSSH-server
+apt install openssh-server
+
+#ssh config
+nano /etc/ssh/sshd_config
+
+#Enable SSH
+systemctl enable ssh
+systemctl start ssh
