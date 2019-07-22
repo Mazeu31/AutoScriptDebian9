@@ -1,5 +1,10 @@
 #!/bin/sh
 
-#Enable SSH
-systemctl enable ssh
+#Requirements
+apt-get update
+apt-get upgrade -y
+
+#install ssh
+apt-get install openssh-server
+systemctl status ssh
 systemctl start ssh
