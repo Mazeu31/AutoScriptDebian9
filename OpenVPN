@@ -13,6 +13,6 @@ ufw status
 
 #install OpenVPN
 wget https://git.io/vpn -O openvpn-install.sh
---sk --enter
 bash openvpn-install.sh
+--sk --enter
 systemctl start openvpn@server 
