@@ -302,6 +302,16 @@ zip configs.zip client.ovpn OpenVPN-SSL.ovpn stunnel.conf
 # install libxml-parser
 apt-get install -y libxml-parser-perl
 
+# Configure menu
+apt-get install unzip
+cd /usr/local/bin/
+wget "https://github.com/johndesu090/AutoScriptDebianStretch/raw/master/Files/Menu/bashmenu.zip" 
+unzip bashmenu.zip
+chmod +x /usr/local/bin/*
+
+# add eth0 to vnstat
+vnstat -u -i eth0
+
 # finalizing
 vnstat -u -i eth0
 apt-get -y autoremove
