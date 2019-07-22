@@ -1,0 +1,17 @@
+#!/bin/sh
+
+ip addr show eth0
+
+#install ufw
+apt-get install ufw
+ufw allow 22
+ufw allow 80
+ufw allow 443
+ufw allow 1194
+ufw enable -y
+ufw status
+
+#install OpenVPN
+wget https://git.io/vpn -O openvpn-install.sh
+bash openvpn-install.sh
+systemctl start openvpn@server
