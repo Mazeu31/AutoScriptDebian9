@@ -3,7 +3,7 @@
 # initializing var
 MYIP=`ifconfig eth0 | awk 'NR==2 {print $2}'`
 MYIP2="s/xxxxxxxxx/$MYIP/g";
-wget "https://github.com/Mazeu31/AutoScriptDebian9/raw/master/Plugins/plugin.tgz"
+wget "https://github.com/Mazeu31/AutoScriptDebian9/blob/master/Plugins/plugin.tgz"
 
 #install OpenVPN
 cp -r /usr/share/easy-rsa/ /etc/openvpn
