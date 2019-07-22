@@ -1,5 +1,4 @@
 #!/bin/sh
-#Script by Mazeu31
 
 #Requirements
 apt update
